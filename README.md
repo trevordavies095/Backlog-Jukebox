@@ -1,3 +1,5 @@
+![Alt text](http://i.imgur.com/13QSkzI.png "Screenshot")
+
 # Backlog-Jukebox
 Manage your music backlog! I have so much music in my music libray, I forget what albums I have yet to listen to. This is why I created
 Backlog Jukebox. You can easily add albums to a library that still need to be listened to. When you want to listen to an album in your 
