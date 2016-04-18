@@ -54,7 +54,6 @@ public class BacklogJukebox extends JFrame
 		
 		while(true)
 		{	
-			System.out.println(library.getSize());
 			switch(choice)
 			{
 				// Random album
