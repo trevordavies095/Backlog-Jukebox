@@ -4,6 +4,7 @@
  * Date           : 04/16/2016
  ***********************************/
 
+import java.awt.event.WindowEvent;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.swing.JFrame;
@@ -46,8 +47,7 @@ public class BacklogJukebox extends JFrame
 		choiceString = JOptionPane.showInputDialog("1. Random Album\n"
 												 + "2. Add Album\n"
 												 + "3. Remove Album\n"
-												 + "4. Search Album\n"
-												 + "5. Show Backlog\n");
+												 + "4. View backlog\n");
 		
 		// Parse choice
 		choice = Integer.parseInt(choiceString);
@@ -79,24 +79,13 @@ public class BacklogJukebox extends JFrame
 				
 				// Remove album
 				case 3:
-					album = JOptionPane.showInputDialog("Album: ");
+					album = JOptionPane.showInputDialog(library.toString() + "Album to remove: ");
 					library.removeAlbum(album);
 					
 					break;
 					
-				// Search album
-				case 4: 
-					album = JOptionPane.showInputDialog("Album: ");
-					
-					if(!(library.searchAlbum(album) == -1))
-						System.out.println(album + " is in the library!");
-					else
-						System.out.println(album + " is NOT in the library!");
-					
-					break;
-					
 				// Show backlog
-				case 5: 
+				case 4: 
 					if(library.isEmpty())
 						JOptionPane.showMessageDialog(null, "Empty library!");
 					else
@@ -116,8 +105,7 @@ public class BacklogJukebox extends JFrame
 			choiceString = JOptionPane.showInputDialog("1. Random Album\n"
 													 + "2. Add Album\n"
 													 + "3. Remove Album\n"
-													 + "4. Search Album\n"
-													 + "5. Show Backlog\n");
+													 + "4. View backlog\n");
 			choice = Integer.parseInt(choiceString);
 		}
 					
