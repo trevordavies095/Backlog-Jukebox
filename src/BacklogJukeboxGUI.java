@@ -90,7 +90,7 @@ public class BacklogJukeboxGUI
 		
 		frmBacklogJukebox = new JFrame();
 		frmBacklogJukebox.setResizable(false);
-		frmBacklogJukebox.setTitle("Backlog Jukebox 2.0");
+		frmBacklogJukebox.setTitle("Backlog Jukebox 2.0.1");
 		frmBacklogJukebox.setBounds(100, 100, 361, 324);
 		frmBacklogJukebox.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmBacklogJukebox.getContentPane().setLayout(null);
