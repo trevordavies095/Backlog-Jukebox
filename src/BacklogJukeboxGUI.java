@@ -175,9 +175,24 @@ public class BacklogJukeboxGUI
 				/************** start btnAdd **************/
 				
 				// Get the album info
-				artist = JOptionPane.showInputDialog("Artist: ");
-				album = JOptionPane.showInputDialog("Album: ");
-				year = JOptionPane.showInputDialog("Year: ");
+				
+				do
+				{
+					artist = JOptionPane.showInputDialog("Artist: ");
+				}
+				while(artist.equals(""));
+				
+				do
+				{
+					album = JOptionPane.showInputDialog("Album: ");
+				}
+				while(artist.equals(""));
+				
+				do
+				{
+					year = JOptionPane.showInputDialog("Year: ");
+				}
+				while(artist.equals(""));
 				
 				// Add the album to the library
 				library.addAlbum(new Album(artist, album, year));
