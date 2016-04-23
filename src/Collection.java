@@ -18,8 +18,8 @@ public class Collection
 	// Class constants
 	
 	// Class variables
-	private List<Album> albums = new LinkedList<Album>();
-	private int count = 0;
+	private List<Album> albums = new LinkedList<Album>();		// Linked list to store backlog
+	private int count = 0;										// Number of albums
 	
 	public Collection()
 	{
@@ -28,17 +28,21 @@ public class Collection
 	
 	public void addAlbum(Album album)
 	{
+		// Add albums to list, increment count
 		albums.add(album);
-		
 		count++;
 	}
 	
 	public void removeAlbum(String album)
 	{
+		// Search for album
 		int i = searchAlbum(album);
 		
+		// IF album isn't found, show error
 		if(i == -1)
 			JOptionPane.showMessageDialog(null, album + " was not found!");
+		
+		// ELSE remove album
 		else
 		{
 			albums.remove(i);
@@ -48,26 +52,33 @@ public class Collection
 	
 	public int searchAlbum(String a)
 	{
-		Album compare;
+		Album compare;				// Album to be searched
 		
+		// For every album in the list
 		for(int i = 0; i < count; i++)
 		{
+			// Get album at index i
 			compare = albums.get(i);
 			
+			// IF there's a match, return index
 			if(a.toLowerCase().equals(compare.getAlbum().toLowerCase()))
 				return i;
 		}
 		
+		// Return -1 (album not found)
 		return -1;
 	}
 	
 	public Album randomAlbum()
 	{
-		Random rand = new Random();
-		int i = 0;
-		Album album;
+		Random rand = new Random();			// Random num gen
+		int i = 0;							// Random number
+		Album album;						// Random album
 		
+		// Get random number
 		i = rand.nextInt(count);
+		
+		// Return album at index i
 		return album = albums.get(i);
 	}
 	
@@ -77,10 +88,9 @@ public class Collection
 		BufferedWriter bw = new BufferedWriter(fw);
 		PrintWriter pw = new PrintWriter(bw);
 		
+		// FOR every album in the list, add album to file
 		for(Album album:albums)
-		{
 			pw.println(album.getYear() + "  "  + album.getArtist() + "  " + album.getAlbum());
-		}
 		
 		pw.flush();
 		pw.close();
@@ -96,6 +106,7 @@ public class Collection
 		String album = "";
 		String year = "";
 		
+		// While it isn't the end of the file, load albums to list
 		while(fileScan.hasNext())
 		{
 			record = fileScan.nextLine();
@@ -109,6 +120,9 @@ public class Collection
 			count++;
 		}
 		
+		fileScan.close();
+		
+		// Return new instance of Collection()
 		return col;
 	}
 	
