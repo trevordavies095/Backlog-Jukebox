@@ -8,6 +8,7 @@
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
+import javax.swing.JScrollBar;
 
 public class BacklogJukeboxGUI 
 {
@@ -95,8 +97,9 @@ public class BacklogJukeboxGUI
 		
 		JTextPane albums = new JTextPane();
 		albums.setEditable(false);
-		albums.setBounds(10, 36, 335, 214);
+		albums.setBounds(10, 34, 319, 216);
 		frmBacklogJukebox.getContentPane().add(albums);
+		
 		albums.setText(library.toString());
 		
 		JButton btnRandom = new JButton("Random");
@@ -202,5 +205,9 @@ public class BacklogJukeboxGUI
 		JLabel lblNewLabel = new JLabel("Backlog:");
 		lblNewLabel.setBounds(10, 11, 65, 14);
 		frmBacklogJukebox.getContentPane().add(lblNewLabel);
+		
+		JScrollPane scrollBar = new JScrollPane(albums); 
+		scrollBar.setBounds(10, 33, 335, 217);
+		frmBacklogJukebox.getContentPane().add(scrollBar);
 	}
 }
