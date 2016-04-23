@@ -1,4 +1,4 @@
-![Alt text](http://i.imgur.com/13QSkzI.png "Screenshot")
+![Alt text](http://i.imgur.com/i1tbubC.png "Screenshot")
 
 # Backlog-Jukebox
 Manage your music backlog! I have so much music in my music library, I forget what albums I have yet to listen to. This is why I created
