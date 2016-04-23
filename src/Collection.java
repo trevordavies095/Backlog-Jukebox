@@ -1,7 +1,15 @@
+/************************************
+ * Program Name   : Backlog Jukebox *
+ * Author         : L Trevor Davies *
+ * Date           : 04/22/2016      *
+ * Version		  : 2.0             *
+ ************************************/
+
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.io.*;
 
